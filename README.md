@@ -1,27 +1,61 @@
-# Instructions
-Now is your opportunity to build a better calculator. Your calculator can work however you wish it to but it should be usable as a calculator.
+# 🧮 Calculadora Mejorada
 
-Firstly, we're going to separate out of our *interactive* logic into the `main()` function, like so:
+Una calculadora interactiva en Python que opera desde la consola y permite realizar operaciones matemáticas básicas ( suma y multiplicación) y validaciones numéricas. 
+Este proyecto promueve buenas prácticas de programación, pruebas automatizadas así como herramientas de calidad de código.
 
+## 📦 Contenido del Proyecto
+
+- `main.py`: Lógica principal de la calculadora y menú interactivo.
+- `test_.py`: Pruebas unitarias para validar el comportamiento de las funciones.
+- Documentación técnica y guía de instalación de herramientas.
+
+## 🚀 Funcionalidades
+
+La calculadora incluye las siguientes funciones:
+
+| Función                       | Descripción                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| `addmultiplenumbers(lista)`   | Suma todos los números de una lista. Devuelve 0 si está vacía.              |
+| `multiplymultiplenumbers(lista)` | Multiplica todos los números de una lista. Devuelve 1 si está vacía.        |
+| `isiteven(numero)`            | Verifica si un número es par (y entero).                                   |
+| `isitaninteger(numero)`       | Verifica si un número es entero, incluyendo flotantes sin decimales (ej. 3.0). |
+
+
+## Instalar dependencias 
 ```
-def main():
-  print("Hello learners!")
-
-if __name__=="__main__":
-  main()
+pip install pytest pytest-cov black flake8 isort mypy
 ```
+## Ejecutar el programa 
+```
+python main.py
+```
+## 🧪 Pruebas
+Las pruebas están definidas en test_.py y cubren todos los casos relevantes
+```
+pytest
+```
+Para ver la covertura del codigo
+```
+pytest --cov
+```
+## 🛠️ Herramientas de Calidad
 
-This is Python *boilerplate* code, which will only run when the program is invoked by a person. All your code should now be inside a function - either this `main()` function (where you can put things like input statements) or another function.
+| Herramienta  | Uso                                                             |
+|--------------|------------------------------------------------------------------|
+| `black`      | Formato automático del código: `black .`                         |
+| `flake8`     | Revisión de estilo y sintaxis: `flake8`                          |
+| `isort`      | Ordenamiento de imports: `isort main.py test_.py`               |
+| `mypy`       | Verificación de tipos estáticos: `mypy main.py test_.py`        |
+| `pytest`     | Ejecución de pruebas: `pytest`                                   |
+| `pytest-cov` | Medición de cobertura: `pytest --cov`                            |
 
-Automatic grading will be scored out of 8, and will test the functionality of the following functions:
+## 📋 Buenas Prácticas
+- Validación de entradas (listas vacías, números decimales).
+- Mensajes claros para el usuario.
+- Cobertura de pruebas del 100% en test_.py.
 
-* `addmultiplenumbers([num, num, ..])` - this function must exist in your program, it should take a list of numbers as input, and it should output the sum of those numbers.
-* `multiplymultiplenumbers([num, num, ..])` - this function must exist in your program, it should take a list of numbers as input, and it should output the result of multiplying each number in turn with the following number.
-* `isiteven(num)` - this function must exist in your program, it should take a single number as input, and it should output a boolean value - `True` if the number is an even, whole number, `False` otherwise.
-* `isitaninteger(num)` - this function must exist in your program, it should take a single number as input, and it should output a boolean value - `True` if the number is an integer, `False` otherwise.
+## 🤖 Uso de IA
+Se utilizó IA para investigar el uso de herramientas como pytest, black y para estructurar la documentación técnica, facilitando la automatización y estandarización del proyecto.
 
-**Remember** This project will be automatically graded, and computers are very literal!
+Desarrollado con 💡 por Fernando.
 
-**Note:** Use the tests! There's nothing wrong with running the tests until they pass. It's not cheating!
-
-**Note:** If you get stuck getting one function to work, try working on a different one. You might find you can solve later functions more quickly than earlier ones.
